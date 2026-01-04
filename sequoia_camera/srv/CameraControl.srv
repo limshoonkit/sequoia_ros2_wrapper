@@ -1,0 +1,12 @@
+# Service to control camera capture
+# Mode: 0 = stop, 1 = single capture, 2 = timelapse
+uint8 MODE_STOP=0
+uint8 MODE_SINGLE=1
+uint8 MODE_TIMELAPSE=2
+
+uint8 mode
+float32 timelapse_interval  # Time between captures in seconds (only used when mode=MODE_TIMELAPSE)
+string folder_name          # Optional: folder name to save images (e.g., "mission_001"). Empty string = use default
+---
+bool success
+string message

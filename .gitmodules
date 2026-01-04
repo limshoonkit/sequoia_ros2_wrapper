@@ -1,0 +1,3 @@
+[submodule "ptpy_vendor/sequoia-ptpy"]
+	path = ptpy_vendor/sequoia-ptpy
+	url = https://github.com/Parrot-Developers/sequoia-ptpy.git

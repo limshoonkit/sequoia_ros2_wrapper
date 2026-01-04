@@ -1,0 +1,17 @@
+# udev rules for Parrot Sequoia multispectral camera
+#
+# This rule prevents auto-mounting and sets proper permissions for PTP access
+# Install: sudo cp 99-parrot-sequoia.rules /etc/udev/rules.d/
+#          sudo udevadm control --reload-rules
+#          sudo udevadm trigger
+#
+# Parrot Sequoia (ID 19cf:5039)
+
+# Prevent automounting as mass storage device
+ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="19cf", ATTR{idProduct}=="5039", ENV{UDISKS_IGNORE}="1"
+
+# Set permissions for PTP access (allows user-level access without sudo)
+SUBSYSTEM=="usb", ATTR{idVendor}=="19cf", ATTR{idProduct}=="5039", MODE="0666", GROUP="plugdev"
+
+# Alternative: Assign to specific group (uncomment if you want to restrict to a specific group)
+# SUBSYSTEM=="usb", ATTR{idVendor}=="19cf", ATTR{idProduct}=="5039", MODE="0660", GROUP="camera"

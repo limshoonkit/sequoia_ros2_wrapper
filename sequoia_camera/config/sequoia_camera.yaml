@@ -1,0 +1,9 @@
+# Sequoia Camera Configuration
+
+sequoia_camera:
+  ros__parameters:
+    # IMU publishing rate in Hz
+    imu_rate: 50.0
+
+    # Sunshine sensor publishing rate in Hz
+    sunshine_rate: 10.0
