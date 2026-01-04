@@ -4,8 +4,8 @@
   <name>ptpy_vendor</name>
   <version>0.1.0</version>
   <description>Vendor package for Parrot sequoia-ptpy Python library</description>
-  <maintainer email="your.email@example.com">Your Name</maintainer>
-  <license>BSD</license>
+  <maintainer email="skl1g14@soton.ac.uk">Janitor</maintainer>
+  <license>MIT</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>ament_cmake_python</buildtool_depend>

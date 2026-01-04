@@ -63,12 +63,19 @@ ros2 service call /sequoia_camera/camera_control sequoia_camera/srv/CameraContro
 ros2 service call /sequoia_camera/camera_control sequoia_camera/srv/CameraControl "{mode: 0}"
 ```
 
-## Camera Connection
+## Note
 
+### Permission
 Run the [script](sequoia_camera/scripts/unmount_sequoia.sh) before launching the node as by default the Camera will be mounted as storage device.
 
 ```
 ./sequoia_camera/scripts/unmount_sequoia.sh
 ```
 
+### Wifi
 Press the button on the camera 4 times quickly to re-enable WiFi.
+
+### General
+```
+Timelapse at every 10s interval, as USB device will response as busy
+```
